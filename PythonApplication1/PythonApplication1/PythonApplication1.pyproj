@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4ba6cb84-9d38-4dd6-8bee-262b28f22579</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ReadPerfMonCsv.py</StartupFile>
+    <StartupFile>Scripts1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ReadPerfMonCsv.py" />
+    <Compile Include="Scripts1.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
