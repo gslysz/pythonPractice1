@@ -5,7 +5,7 @@ import shutil
 import sys
 
 
-def organize_files(source_folder, target_base_folder):
+def organize_files(source_folder, target_base_folder, split_by_month=True, backup=True, delete_source=True):
     source_exists = os.path.exists(source_folder)
     if not source_exists:
         msg = "Cannot organize files. Source path does not exist. Source=" + source_folder
@@ -33,8 +33,8 @@ def organize_files(source_folder, target_base_folder):
         last_mod = datetime.datetime.fromtimestamp(timestamp)
         year_num = last_mod.year
         month_num = last_mod.month
-        copy_file_to_target_folder(path_f, target_base_folder, year_num, month_num, split_by_month=False,
-                                   backup_files=True, delete_source=True)
+        copy_file_to_target_folder(path_f, target_base_folder, year_num, month_num, split_by_month,
+                                   backup, delete_source)
 
 
 if __name__ == "__main__":
