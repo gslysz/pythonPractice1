@@ -37,12 +37,6 @@ def organize_files(source_folder, target_base_folder, split_by_month=True, backu
                                    backup, delete_source)
 
 
-if __name__ == "__main__":
-    source_path = str(sys.argv[1])
-    target_path = str(sys.argv[2])
-    organize_files(source_path, target_path)
-
-
 def create_month_folders(year_folder_path):
     dir_exists = os.path.exists(year_folder_path)
     if dir_exists:
@@ -100,3 +94,12 @@ def copy_file_to_target_folder(source_file, target_base_folder_path, year_num, m
             os.remove(source_file)
             msg = "\t\tRemoved source file: {}".format(target_file_path)
             print(msg)
+
+
+if __name__ == "__main__":
+    source_path = str(sys.argv[1])
+    target_path = str(sys.argv[2])
+    organize_files(source_path, target_path)
+
+
+
